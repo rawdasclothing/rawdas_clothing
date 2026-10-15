@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover clothing and fabrics at Rawda's Clothing in The Gambia.">
+    <title>Rawda's Clothing</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="container navbar">
+        <a href="#home" class="logo">Rawda's Clothing</a>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#products">Products</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#about">About Us</a>
+            <a href="#order">My Order</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <p class="eyebrow">Style • Elegance • Quality</p>
+            <h1>Discover Your Perfect Style</h1>
+            <p>Find beautiful clothing and fashionable fabrics at Rawda's Clothing.</p>
+            <a href="#products" class="btn">Shop Now</a>
+        </div>
+    </section>
+
+    <section class="section" id="products">
+        <div class="container">
+            <h2>Our Products</h2>
+            <p class="section-description">
+                Browse our collection and choose your favourite items.
+            </p>
+
+        <div class="add-clothes-section">
+    <button type="button" id="show-add-form" class="btn">
+        + Add New Clothes
+    </button>
+
+    <form id="add-clothes-form" hidden>
+        <h3>Add New Clothes</h3>
+
+        <label for="clothes-name">Clothes Name</label>
+        <input type="text" id="clothes-name" required>
+
+        <label for="clothes-description">Description</label>
+        <input type="text" id="clothes-description" required>
+
+        <label for="clothes-price">Price (D)</label>
+        <input type="number" id="clothes-price" min="0.01" step="0.01" required>
+
+        <label for="clothes-image">Clothes Photo</label>
+        <input type="file" id="clothes-image" accept="image/*" required>
+
+        <button type="submit" class="btn">Save Clothes</button>
+        <button type="button" id="cancel-add-form" class="btn">Cancel</button>
+    </form>
+</div>
+
+<div class="product-grid" id="product-list"></div>
+    </section>
+
+    <section class="section gallery-section" id="gallery">
+        <div class="container">
+            <h2>Our Gallery</h2>
+            <p class="section-description">Fashion inspiration for everyone.</p>
+
+            <div class="gallery-grid">
+                <img
+                    src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=700&q=80"
+                    alt="Fashion shopping"
+                    loading="lazy"
+                >
+                <img
+                    src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=700&q=80"
+                    alt="Clothing collection"
+                    loading="lazy"
+                >
+                <img
+                    src="https://images.unsplash.com/photo-1485230895905-ec40ba36b9bc?auto=format&fit=crop&w=700&q=80"
+                    alt="Fashion outfit"
+                    loading="lazy"
+                >
+            </div>
+        </div>
+    </section>
+
+    <section class="section about-section" id="about">
+        <div class="container">
+            <h2>About Rawda's Clothing</h2>
+            <p>
+                Rawda's Clothing offers clothing and fabrics for customers
+                looking for style and elegance. Browse our products, select
+                your items, and contact us to place your order.
+            </p>
+        </div>
+    </section>
+
+    <section class="section cart-section" id="order">
+        <div class="container">
+            <h2>Your Shopping Order</h2>
+            <p class="section-description">
+                Check your selected products and total before ordering.
+            </p>
+
+            <div id="order-list" class="order-list">
+                <p class="empty-cart">Your order is currently empty.</p>
+            </div>
+
+            <p class="cart-total">
+                Total: <strong id="cart-total">D0.00</strong>
+            </p>
+
+            <button type="button" class="btn" id="checkout-button">
+                Order on WhatsApp
+            </button>
+
+            <p id="cart-message" class="message" aria-live="polite"></p>
+        </div>
+    </section>
+
+    <section class="section contact-section" id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>Contact us for product information and orders.</p>
+
+            <a
+                class="btn"
+                href="https://wa.me/220833104397"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Chat with Us on WhatsApp
+            </a>
+
+            <p class="email-contact">
+                <strong>Email:</strong>
+                <a href="mailto:rawdasclothing500@gmail.com">
+                    rawdasclothing500@gmail.com
+                </a>
+            </p>
+
+            <p class="location-text">
+                <strong>Our Location:</strong>
+                Jabang Video Club Junction, The Gambia
+            </p>
+
+            <a
+                class="btn map-button"
+                href="https://www.google.com/maps/search/?api=1&query=Jabang+Video+Club+Junction+The+Gambia"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Find Us on Google Maps
+            </a>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <p>
+            &copy; <span id="year"></span> Rawda's Clothing.
+            All rights reserved.
+        </p>
+        <p>Email: rawdasclothing500@gmail.com</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
